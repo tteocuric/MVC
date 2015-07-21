@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+class RailTrick {
+    static func returnTricks() -> Array<String> {
+    var RailTricks = ["50-50",
+                        "5-0",
+                        "Nosegrind",
+                        "Smith grind",
+                        "Feeble" ]
+        var tableRailTricks = [String]()
+        for trick in RailTricks{
+            tableRailTricks.append(trick)
+        }
+    return tableRailTricks
+    }
+}

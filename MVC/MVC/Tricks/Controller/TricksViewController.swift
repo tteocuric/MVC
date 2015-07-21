@@ -8,10 +8,16 @@
 
 import UIKit
 
-class TricksViewController: UIViewController {
+class TricksViewController: UIViewController, UITableViewDataSource {
+    var tricksArray = RailTrick.returnTricks()
 
-    override func viewDidLoad() {
+   
+    
+    @IBOutlet weak var railTrickTable: UITableView!
+        override func viewDidLoad() {
         super.viewDidLoad()
+            
+            self.railTrickTable.dataSource = self
 
         // Do any additional setup after loading the view.
     }
@@ -21,15 +27,15 @@ class TricksViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.tricksArray.count
     }
-    */
-
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "RailTrickCell")
+        var title = self.tricksArray[indexPath.row]
+        cell.textLabel?.text = title
+        
+        return cell
+    }
 }
+

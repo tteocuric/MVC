@@ -15,6 +15,7 @@
 		8E9C684D1B5E16DB0039519A /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C684C1B5E16DB0039519A /* CategoriesViewController.swift */; };
 		8E9C68531B5E1E3D0039519A /* TricksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C68521B5E1E3D0039519A /* TricksViewController.swift */; };
 		8E9C68551B5E24C90039519A /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C68541B5E24C90039519A /* CategoriesModel.swift */; };
+		A29E918E1B5E3E50005A1D9F /* RailTrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E918D1B5E3E50005A1D9F /* RailTrick.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		8E9C684C1B5E16DB0039519A /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesViewController.swift; path = TrickCategories/Controller/CategoriesViewController.swift; sourceTree = "<group>"; };
 		8E9C68521B5E1E3D0039519A /* TricksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TricksViewController.swift; path = Tricks/Controller/TricksViewController.swift; sourceTree = "<group>"; };
 		8E9C68541B5E24C90039519A /* CategoriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesModel.swift; path = TrickCategories/Model/CategoriesModel.swift; sourceTree = "<group>"; };
+		A29E918D1B5E3E50005A1D9F /* RailTrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailTrick.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		8E9C684F1B5E1DD70039519A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A29E918D1B5E3E50005A1D9F /* RailTrick.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			files = (
 				8E9C684D1B5E16DB0039519A /* CategoriesViewController.swift in Sources */,
 				8E9C68291B5E130A0039519A /* AppDelegate.swift in Sources */,
+				A29E918E1B5E3E50005A1D9F /* RailTrick.swift in Sources */,
 				8E9C68531B5E1E3D0039519A /* TricksViewController.swift in Sources */,
 				8E9C68551B5E24C90039519A /* CategoriesModel.swift in Sources */,
 			);
@@ -481,6 +485,7 @@
 				8E9C68441B5E130A0039519A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E9C68451B5E130A0039519A /* Build configuration list for PBXNativeTarget "MVCTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +494,7 @@
 				8E9C68471B5E130A0039519A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
