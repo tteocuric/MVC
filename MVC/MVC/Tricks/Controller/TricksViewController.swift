@@ -10,7 +10,6 @@ import UIKit
 
 class TricksViewController: UIViewController, UITableViewDataSource {
     var tricksArray = RailTrick.returnTricks()
-
    
     
     @IBOutlet weak var railTrickTable: UITableView!
