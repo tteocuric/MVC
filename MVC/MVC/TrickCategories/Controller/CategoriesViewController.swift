@@ -8,8 +8,8 @@
 
 import UIKit
 
-class CategoriesViewController: UIViewController, UITableViewDataSource {
-    var categoriesArray = CategoriesModel.allCategories()
+class CategoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var categoriesArray = CategoryMenuItem.getAllCategoryMenuItems()
     
     @IBOutlet weak var categoriesTable: UITableView!
 
@@ -17,6 +17,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
 
         self.categoriesTable.dataSource = self
+        self.categoriesTable.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -50,10 +51,22 @@ class CategoriesViewController: UIViewController, UITableViewDataSource {
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CategoriesCell")
-        var title = self.categoriesArray[indexPath.row]
-        cell.textLabel?.text = title
+        var menuItem = self.categoriesArray[indexPath.row]
+        cell.textLabel?.text = menuItem.categoryTitle
         
         return cell
+    }
+    
+    
+    // UITableViewDelegate Protocol
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        var vc = TrickViewController()
+        var menuItem:CategoryMenuItem = categoriesArray[indexPath.row]
+        var trick:SkateTrick = menuItem.skateTrick!
+        vc.trick = trick
+        
+        self.navigationController?.showViewController(vc, sender: self)
     }
     
 

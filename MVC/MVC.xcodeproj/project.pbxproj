@@ -13,9 +13,10 @@
 		8E9C68331B5E130A0039519A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9C68311B5E130A0039519A /* LaunchScreen.xib */; };
 		8E9C683F1B5E130A0039519A /* MVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C683E1B5E130A0039519A /* MVCTests.swift */; };
 		8E9C684D1B5E16DB0039519A /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C684C1B5E16DB0039519A /* CategoriesViewController.swift */; };
-		8E9C68531B5E1E3D0039519A /* TricksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C68521B5E1E3D0039519A /* TricksViewController.swift */; };
 		8E9C68551B5E24C90039519A /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C68541B5E24C90039519A /* CategoriesModel.swift */; };
-		A29E918E1B5E3E50005A1D9F /* RailTrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E918D1B5E3E50005A1D9F /* RailTrick.swift */; };
+		A29E918E1B5E3E50005A1D9F /* SkateTrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E918D1B5E3E50005A1D9F /* SkateTrick.swift */; };
+		A29E91901B5EA870005A1D9F /* CategoryMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E918F1B5EA870005A1D9F /* CategoryMenuItem.swift */; };
+		A29E91921B5EAFF7005A1D9F /* TrickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E91911B5EAFF7005A1D9F /* TrickViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +40,10 @@
 		8E9C683D1B5E130A0039519A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E9C683E1B5E130A0039519A /* MVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCTests.swift; sourceTree = "<group>"; };
 		8E9C684C1B5E16DB0039519A /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesViewController.swift; path = TrickCategories/Controller/CategoriesViewController.swift; sourceTree = "<group>"; };
-		8E9C68521B5E1E3D0039519A /* TricksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TricksViewController.swift; path = Tricks/Controller/TricksViewController.swift; sourceTree = "<group>"; };
 		8E9C68541B5E24C90039519A /* CategoriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesModel.swift; path = TrickCategories/Model/CategoriesModel.swift; sourceTree = "<group>"; };
-		A29E918D1B5E3E50005A1D9F /* RailTrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailTrick.swift; sourceTree = "<group>"; };
+		A29E918D1B5E3E50005A1D9F /* SkateTrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkateTrick.swift; sourceTree = "<group>"; };
+		A29E918F1B5EA870005A1D9F /* CategoryMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryMenuItem.swift; sourceTree = "<group>"; };
+		A29E91911B5EAFF7005A1D9F /* TrickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrickViewController.swift; path = Tricks/Controller/TrickViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				8E9C68541B5E24C90039519A /* CategoriesModel.swift */,
+				A29E918F1B5EA870005A1D9F /* CategoryMenuItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -165,7 +168,7 @@
 		8E9C684F1B5E1DD70039519A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A29E918D1B5E3E50005A1D9F /* RailTrick.swift */,
+				A29E918D1B5E3E50005A1D9F /* SkateTrick.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -180,7 +183,7 @@
 		8E9C68511B5E1DED0039519A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8E9C68521B5E1E3D0039519A /* TricksViewController.swift */,
+				A29E91911B5EAFF7005A1D9F /* TrickViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -287,8 +290,9 @@
 			files = (
 				8E9C684D1B5E16DB0039519A /* CategoriesViewController.swift in Sources */,
 				8E9C68291B5E130A0039519A /* AppDelegate.swift in Sources */,
-				A29E918E1B5E3E50005A1D9F /* RailTrick.swift in Sources */,
-				8E9C68531B5E1E3D0039519A /* TricksViewController.swift in Sources */,
+				A29E91921B5EAFF7005A1D9F /* TrickViewController.swift in Sources */,
+				A29E918E1B5E3E50005A1D9F /* SkateTrick.swift in Sources */,
+				A29E91901B5EA870005A1D9F /* CategoryMenuItem.swift in Sources */,
 				8E9C68551B5E24C90039519A /* CategoriesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
