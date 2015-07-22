@@ -69,12 +69,16 @@ class SkateTrick {
         }
         
     }
+    
+    
     func randomTrick() -> String  {
         var randomintrick = arc4random_uniform(UInt32(self.inTricks.count))
         var randomstance = arc4random_uniform(UInt32(self.stanceArray.count))
         SkateTrick.trickCounter++
         return self.stanceArray[Int(randomstance)] + " " + self.inTricks[Int(randomintrick)]
     }
+    
+    
 }
 
 

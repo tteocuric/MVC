@@ -23,7 +23,7 @@ class TrickViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+            
         trickNameLabel.text = trick!.randomTrick()
     }
 

@@ -20,7 +20,9 @@ class CategoryMenuItem  {
     
     static func getAllCategoryMenuItems() ->  Array<CategoryMenuItem> {
         var menuItems = [
-            CategoryMenuItem(categoryTitle: "FlatGround", skateTrick: SkateTrick(easy: true)),
+            CategoryMenuItem(categoryTitle: "FlatGround1", skateTrick: SkateTrick(easy: true)),
+            CategoryMenuItem(categoryTitle: "FlatGround2", skateTrick: SkateTrick(easy: false)),
+            CategoryMenuItem(categoryTitle: "FlatGround3", skateTrick: SkateTrick(easy: true)),
             CategoryMenuItem(categoryTitle: "Manual", skateTrick: ManualSkateTrick(easy: true)),
             CategoryMenuItem(categoryTitle: "Grind", skateTrick: RailSkateTrick(easy: true))
         ]

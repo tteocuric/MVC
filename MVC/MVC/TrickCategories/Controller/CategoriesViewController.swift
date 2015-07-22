@@ -10,7 +10,7 @@ import UIKit
 
 class CategoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var categoriesArray = CategoryMenuItem.getAllCategoryMenuItems()
-    
+    var selectedCategory: Int?
     @IBOutlet weak var categoriesTable: UITableView!
 
     override func viewDidLoad() {
@@ -61,12 +61,21 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     // UITableViewDelegate Protocol
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        var vc = TrickViewController()
-        var menuItem:CategoryMenuItem = categoriesArray[indexPath.row]
-        var trick:SkateTrick = menuItem.skateTrick!
-        vc.trick = trick
+         self.selectedCategory = indexPath.row
         
-        self.navigationController?.showViewController(vc, sender: self)
+//        var vc = TrickViewController()
+//        var menuItem:CategoryMenuItem = categoriesArray[indexPath.row]
+//        var trick:SkateTrick = menuItem.skateTrick!
+//        vc.trick = trick
+//        
+//        self.navigationController?.showViewController(vc, sender: self)
+          self.performSegueWithIdentifier("trickSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var tricksViewController: TrickViewController = segue.destinationViewController as! TrickViewController
+        var menuItem:CategoryMenuItem = categoriesArray[self.selectedCategory!]
+        tricksViewController.trick = menuItem.skateTrick
     }
     
 
